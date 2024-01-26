@@ -2,6 +2,7 @@ package com.example.hw1
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,7 +22,9 @@ class MainActivity : ComponentActivity() {
         val clickMeButton = findViewById<Button>(R.id.click_me)
 
         clickMeButton.setOnClickListener {
-            Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT).show()
+            var display_text : TextView = findViewById<TextView>(R.id.text_view)
+            display_text.setText("Hello World")
         }
     }
 }
